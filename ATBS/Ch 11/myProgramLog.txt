@@ -1,0 +1,10 @@
+ $(asctime)s - DEBUG - Start of program
+ $(asctime)s - DEBUG - Start of factorial(5%)
+ $(asctime)s - DEBUG - i is 0, total is 0
+ $(asctime)s - DEBUG - i is 1, total is 0
+ $(asctime)s - DEBUG - i is 2, total is 0
+ $(asctime)s - DEBUG - i is 3, total is 0
+ $(asctime)s - DEBUG - i is 4, total is 0
+ $(asctime)s - DEBUG - i is 5, total is 0
+ $(asctime)s - DEBUG - End of factorial(5%)
+ $(asctime)s - DEBUG - End of program
