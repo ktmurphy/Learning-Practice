@@ -13,3 +13,27 @@ Objects: Bill:
          PdfReport:
             filename
             generate(flatmate1, flatmate2, bill)
+
+Katie's version:
+Title: Flatmates Bill
+Description: This application will be used through the command line.
+The app will recieve as input the amount of a bill for a period of time. 
+It will also receive the number of days the flatmates stayed in 
+the house for that period. It will return the bill for each flatmate 
+based on the time spent in the house/away. It will also return a 
+link for the bill and a pdf.
+Objects: 
+   Bill:
+      amount
+      period
+   Flatmate:
+      name
+      days_in_house
+      owes(bill)
+   PdfReport:
+      filename
+      create(flatmate1, flatmate2, bill)
+
+   
+   
+   
