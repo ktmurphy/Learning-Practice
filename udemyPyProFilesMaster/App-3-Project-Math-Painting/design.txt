@@ -20,3 +20,32 @@ Objects: Square:
             height
             color
             make(imagepath)
+
+
+
+Title: Math Painter
+Description: A command-line app that lets you draw rectangles and squares 
+on a black or white canvas by indicating the type of shape, the 
+top right corner, the dimensions, and the color. 
+
+Objects:
+
+Rectangle: 
+   x coordinate
+   y coordinate
+   width
+   height
+   color
+   Draw(canvas)
+Square: 
+   x coordinate
+   y coordinate
+   side length
+   color
+   Draw(canvas)
+Canvas: 
+   width
+   height
+   color
+   make(imagePath)
+
