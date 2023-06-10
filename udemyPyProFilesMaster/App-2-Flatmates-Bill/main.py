@@ -1,5 +1,6 @@
 from flat import Bill, Flatmate
 from reports import PdfReport
+import filesharer
 
 # Gather bill information
 amount = float(input("Please enter the bill amount: "))
@@ -18,5 +19,8 @@ flatmate2 = Flatmate(flatmate2_name, flatmate2_days_in_house)
 print(f"{flatmate1.name} owes: ", flatmate1.owes(the_bill, flatmate2))
 print(f"{flatmate2.name} owes: ", flatmate2.owes(the_bill, flatmate1))
 
-pdf = PdfReport(filename=f"{the_bill.period}.pdf")
+pdf = PdfReport(filename = f"{the_bill.period}.pdf")
 pdf.create(flatmate1, flatmate2, bill=the_bill)
+
+file_sharer = filesharer.FileSharer(pdf.filename)
+print(file_sharer.share())

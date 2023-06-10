@@ -2,6 +2,7 @@ from fpdf import FPDF
 import webbrowser
 import os
 
+
 class PdfReport:
     """
     Creates PdfReport based on the amount owed by each flatmate for the period.
