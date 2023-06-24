@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calorie Calculation Form</title>
+        <link rel="stylesheet" href="static/main.css"
+    </head>
+    <body>
+        <h2>Calorie Calculation Form</h2>
+        <p>Fill in the form and click 'submit' to get the recommended number of calories for you today.</p>
+        <form action="/calorie_form_page" method="post">
+            <p>Let's get some more information about you!</p>
+            {{form.weight.label}} {{form.weight}}
+            <br>
+            {{form.height.label}} {{form.height}}
+            <br>
+            {{form.age.label}} {{form.age}}
+            <hr>
+            <p>The temperature outside also impacts your calorie requirements! Let's get some
+                information about where you are located so we can get the most accurate calorie requirement!
+            </p>
+            {{form.city.label}} {{form.city}} 
+            <br>
+            {{form.country.label}} {{form.country}}
+            <br>
+
+            {{form.button}}
+            <br>
+            {% if result %}
+            <h2>It is recommended that you consume {{calories}} calories today!</h2>
+            {% endif %} 
+        </form>
+    </body>
+</html>
