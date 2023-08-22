@@ -7,7 +7,7 @@ class About:
 
     def serve(self):
         wp = jp.QuasarPage(tailwind=True)
-        div = jp.Div(a=wp, classes="bg-grey h-screen")
+        div = jp.Div(a=wp, classes="bg-grey-50 h-screen")
         jp.Div(a=div, text="This is the About page!", classes= "text-4xl m-2")
         jp.Div(a=div, text="""
         A web app that lets users type in a term in a text box and returns the English definition
