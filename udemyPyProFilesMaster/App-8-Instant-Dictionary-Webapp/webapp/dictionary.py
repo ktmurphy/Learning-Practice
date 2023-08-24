@@ -1,8 +1,9 @@
 import justpy as jp
 import definition
+from webapp import layout
+from webapp import page
 
-
-class Dictionary:
+class Dictionary(page.Page):
 
     path = "/dictionary"
     
@@ -10,7 +11,13 @@ class Dictionary:
     def serve(cls, requestsOjb):
         # in previous line, cls is the same as self, but just cls to make it clear
         wp = jp.QuasarPage(tailwind=True)
-        div = jp.Div(a=wp, classes="bg-grey-50 h-screen")
+
+        lay = layout.DefaultLayout(a=wp)
+
+        page_container = jp.QPageContainer(a=lay)  
+
+        
+        div = jp.Div(a=page_container, classes="bg-grey-50 h-screen")
         jp.Div(a=div, text="Instant Dictionary", classes= "text-4xl m-2")
         jp.Div(a=div, text="Gets the definition of any English word instantly as you type.", classes="text-lg")
         
