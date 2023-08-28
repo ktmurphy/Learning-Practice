@@ -3,6 +3,8 @@ import definition
 from webapp import layout
 from webapp import page
 
+import requests
+
 class Dictionary(page.Page):
 
     path = "/dictionary"
@@ -48,5 +50,7 @@ class Dictionary(page.Page):
         #event handlers get a widget and msg parameter
         #widget gets as a value the value of the widget creating the event - input_box
         #value of widget is whatever people enter in input_box
-        defined = definition.Definition(widget.value).get()
-        widget.outputdiv.text = " ".join(defined)
+        req = requests.get(f"http://127.0.0.1:8000/api?w={widget.value}")
+        data = req.json()
+        
+        widget.outputdiv.text = " ".join(data['definition'])

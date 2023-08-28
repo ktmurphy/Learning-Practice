@@ -1,3 +1,71 @@
+Cinema Booking App:
+A command line interface app that takes inputs from the user about seat choice and 
+credit card information and returns a PDF ticket if the purchase is made successfully.
+
+Classes: 
+Seat: 
+- Taken/Not Taken
+- Location
+- price
+- UpdateSeatStatus(seat_choice)
+
+
+Credit Card:
+- Card number
+- cvc
+- name
+- type
+- ChargeForSeat()
+
+
+SeatHolder: 
+- name
+
+Ticket:
+- path
+- ReturnPDF()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Class
 Title: Cinema Ticket Booking
 Description: An app where a user can book a cinema seat
 if the seat is free and if the user has balance in their card.
